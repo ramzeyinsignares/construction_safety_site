@@ -1,0 +1,296 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", Arial, sans-serif;
+  background-color: #FFFFFF;
+  color: #1A2A3A;
+  line-height: 1.6;
+}
+
+a {
+  color: #F57C00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: #1A2A3A;
+  color: #FFFFFF;
+  padding: 1rem 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-brand {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid #F57C00;
+}
+
+.hero {
+  background: linear-gradient(rgba(26, 42, 58, 0.82), rgba(26, 42, 58, 0.88)),
+              url('https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+  color: #FFFFFF;
+  padding: 4rem 0;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero h1 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #F57C00;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.section.alt {
+  background-color: #E8ECEF;
+}
+
+.section h2 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.section-lead {
+  max-width: 720px;
+  margin-bottom: 1.5rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+  margin-top: 0;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #F57C00;
+  color: #FFFFFF;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.four-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.four-grid .card {
+  text-align: center;
+}
+
+.icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.rebuttal-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.rebuttal-item {
+  margin-bottom: 1rem;
+}
+
+.rebuttal-item strong {
+  display: block;
+}
+
+.callout {
+  padding: 1.5rem;
+  border-left: 4px solid #F57C00;
+  background-color: #E8ECEF;
+  margin: 1.5rem 0;
+}
+
+.cta-section {
+  background-color: #F57C00;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 2.5rem 0;
+}
+
+.cta-section h2 {
+  color: #FFFFFF;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.btn-outline:hover {
+  background-color: #FFFFFF;
+  color: #F57C00;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #1A2A3A;
+  color: #FFFFFF;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+/* Content-specific styles */
+
+.two-column {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .four-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .two-column {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .grid-3,
+  .four-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .hero {
+    padding: 3rem 0;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+.bio-card {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.mission-block {
+  background-color: #1A2A3A;
+  color: #FFFFFF;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.citation-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.citation-list li {
+  margin-bottom: 0.75rem;
+}
+
+.citation-list li span {
+  display: block;
+}
+
+.small {
+  font-size: 0.9rem;
+}
